@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Coimbra - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Rafael Coimbra</div>
+            <ul class="links-navegacao">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#educacao">Educação</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><button class="botao-tema" id="botaoTema">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container-hero">
+            <div class="conteudo-hero">
+                <h1>Especialista em</h1>
+                <div class="titulo-hero">
+                    <span class="destaque">Banco de dados</span><br>
+                    <span class="destaque">Infra de rede</span>
+                </div>
+                <p class="descricao-hero">
+                    Projeto, opero e otimizo ambientes críticos: redes multi-site, virtualização, automação, observabilidade e bancos de dados MySQL.
+                </p>
+                <div class="botoes-hero">
+                    <a href="#contato" class="botao-primario">Fale comigo</a>
+                    <a href="#habilidades" class="botao-secundario">Habilidades</a>
+                </div>
+            </div>
+            <div class="imagem-hero">
+                <img src="/IMG_0046.jpeg" alt="Rafael Coimbra">
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2 class="titulo-secao">Sobre mim</h2>
+        <p>Sou entusiasta de tecnologia movido pelo desafio de transformar ideias em soluções. Tenho formação técnica em Informática pelo Colégio Cotemig e curso Análise e Desenvolvimento de Sistemas.</p>
+    </section>
+
+    <section id="habilidades">
+        <h2 class="titulo-secao">Habilidades</h2>
+        <div class="grade-habilidades">
+            <div class="card-habilidade">
+                <div class="icone-habilidade">💾</div>
+                <h3>Banco de dados</h3>
+                <p>MySQL, PostgreSQL, otimização</p>
+            </div>
+            <div class="card-habilidade">
+                <div class="icone-habilidade">🌐</div>
+                <h3>Infra de Rede</h3>
+                <p>Redes, virtualização, segurança</p>
+            </div>
+            <div class="card-habilidade">
+                <div class="icone-habilidade">💻</div>
+                <h3>Front End</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h2 class="titulo-secao">Projetos</h2>
+        <div class="container-projetos" id="containerProjetos">
+            <div class="card-projeto" onclick="abrirModal(0)">
+                <div class="imagem-projeto">🗄️</div>
+                <div class="conteudo-projeto">
+                    <h3>Gestão de BD</h3>
+                    <p>Sistema de banco de dados otimizado</p>
+                </div>
+            </div>
+            <div class="card-projeto" onclick="abrirModal(1)">
+                <div class="imagem-projeto">🌐</div>
+                <div class="conteudo-projeto">
+                    <h3>Infraestrutura</h3>
+                    <p>Rede corporativa segura</p>
+                </div>
+            </div>
+            <div class="card-projeto" onclick="abrirModal(2)">
+                <div class="imagem-projeto">🔐</div>
+                <div class="conteudo-projeto">
+                    <h3>Segurança</h3>
+                    <p>Sistema Zero Trust</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="educacao">
+        <h2 class="titulo-secao">Educação</h2>
+        <div class="grade-educacao">
+            <div class="card-educacao verde">
+                <h3>Curso em vídeo</h3>
+                <h4>Gustavo Guanabara</h4>
+                <div>Concluído - 2018-2019</div>
+            </div>
+            <div class="card-educacao amarelo">
+                <h3>Técnico em Informática</h3>
+                <h4>Colégio Cotemig</h4>
+                <div>Em andamento - 2025</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2 class="titulo-secao">Contato</h2>
+        <form class="formulario-contato" id="formularioContato">
+            <div class="grupo-formulario">
+                <label>Nome *</label>
+                <input type="text" id="nome" required>
+                <span class="mensagem-erro">Por favor, informe seu nome</span>
+            </div>
+            <div class="grupo-formulario">
+                <label>Telefone *</label>
+                <input type="tel" id="telefone" required>
+                <span class="mensagem-erro">Telefone inválido</span>
+            </div>
+            <div class="grupo-formulario">
+                <label>Email *</label>
+                <input type="email" id="email" required>
+                <span class="mensagem-erro">Email inválido</span>
+            </div>
+            <div class="grupo-formulario">
+                <label>Mensagem *</label>
+                <textarea id="mensagem" required></textarea>
+                <span class="mensagem-erro">Por favor, escreva uma mensagem</span>
+            </div>
+            <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+            <div class="mensagem-sucesso" id="mensagemSucesso">Mensagem enviada com sucesso!</div>
+        </form>
+    </section>
+
+    <footer>
+        <div class="grade-contato">
+            <div class="card-contato">
+                <div class="icone-contato">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="32" height="32" fill="url(#pattern0_16_2)"/>
+                    <defs>
+                    <pattern id="pattern0_16_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_16_2" transform="scale(0.03125)"/>
+                    </pattern>
+                    <image id="image0_16_2" width="32" height="32" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJvSURBVFiF7ZbPSxRhGMc/78w06+oqLLuZqSCJUlmoBV1KyEARpEux2i9P/Q2CXSoyCCSMztFB+inaISgRIqKgQ13SJCmTPGhuWW7q6q47u+2+HfIH0zaZsrPboe9leJ7nnff7YXjmfR8BwJmHbiTnQPiAYuyUZALBPdAv0FE/J36ai+dAha3GySTDGLEaBSnOp98cQOzCoZ9VAF/6zZckaVKArRkDEBQpgJIxAFAszV26ys1jVcy3N/C+9SDNlfZ8KEuAzsM7adlThEtXKffmcPt4NdWFeekDaNyeb4o1RdBQvjl9AP5gJCk3tWCkD6Ctf4RQNL4Svxifpfu1P+UAgrY+aVUscTupK/MysxjjwdspYnHLpRuWZlVwblKpLfWgCoE3W2d/iZtnY99QFcHJ6kKcmgrAl5DB/eEpCnIdHN1dQLknm7iE0ekQPUOfmFmMbQygrsxDV1PlSjwZjFB86QkV+S5uNFet5KWEE3cHuO6rxKWrpj0uN+7Ad+sVj0anLQEse0D75YjQFAGAuvRclhDQ1VyVZA6Q69DobdnLFpdj/QDrUZZmvU2eQ+P0PusbPiUAgXCUQ9de4m1/zKnuQaLxhKleW+qxF6C17x1PxwIEwlHuDPrpGfpkqm9zO+0F6B/5aooH/EFTnPOb/kgpwFzE/KstGHFTnKXZDLCWhLCuZXIW+A/wjwNMBiMY31cPlA+BMACBUJRwbLXLP88bxBIy6d2EXM1NzCbPFsv643WcDilAYs1V9imhAKkfc/5eHxWgN2P2UvYqGNF2kMPpN+cNwnFR4eqRWXAcAK4gmQDsbEoJjCNlJ0KvoaN+7gfpQ70KFALHSgAAAABJRU5ErkJggg=="/>
+                    </defs>
+                    </svg>
+                </div>
+                <h3>LinkedIn</h3>
+                <p><a href="https://linkedin.com/in/rafael-coimbra" target="_blank">@rafael-coimbra</a></p>
+            </div>
+            <div class="card-contato">
+                <div class="icone-contato">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="32" height="32" fill="url(#pattern0_16_4)"/>
+                        <defs>
+                        <pattern id="pattern0_16_4" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_16_4" transform="scale(0.03125)"/>
+                        </pattern>
+                        <image id="image0_16_4" width="32" height="32" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAmlJREFUWIXt1s9rHHUYx/HXM1TsUWna5lgP2kiwFRQ9ePDQFLzoxX8gnrymiYea3Q1lf0QtpjUHBa+C/0AvomkMHgQFBTEE9aS9CVnRm4gyj4dO0t3GTVezWQvtB+b0/cy83zzfYebL/dzrCfB+PqBrWmliLNRC14Qtr8afYTkfU7qG02OB38oP0otHlN7bhafPha1DxaZp4TmcFt4N7fwdD7q5Hb8IM2rxzaHAO/mkdB3HkPijwFHckDo4Jm1o59Mjhzfz7C48reAGjha7hUbUK4mHsDZSiWaeVfTAG/HazlLRV2xEHcuVxCea+dQI4RO40gvfKwD1qFUSDyusHUiik2f64PVYuL2yV2BUEp08I63vBx8ssCOR3qgkPtLMJ4aGt/Jx6WNMCFcHwfcXgEYsVhLHFdaHkljOKeFTTApX1WJ+v/r+AjsSvDmUxHJOKW1gEu/cCT6cQH8GS/TDh86dBdq5govYlj6oJK5r5vRup5nTSp9hsupsY6669wACrXwb89hWOqduVljFCYV17XxGM59VWMcJYVXdrNK5SmK+esZ/EGjlsrCwC1+KTRGpFnPSWziJLxW+wElh1aILItJSbErP42dhQSev/DuBVl4WXkdX6byl2Oxbb8RF4RVsVNesWsyJyJ7Od0ovoCtd0MrL/4QK7Uz8pB6PgHZ2sIhfK/jXA6c0TAZ9kNr5I071T2DUcKjFt0oz6GL+9hfz1gTSh0INv+G8enx1YHhven9KaUV4Gaf+9wNJaOcaZjDuIxmshVY+KlzD1KGC9+Z76aWbx/JLeURhWjg+FnTaVtpyKf4aC+9+7ur8DWRB/UvaYBlPAAAAAElFTkSuQmCC"/>
+                        </defs>
+                        </svg>
+                </div>
+                <h3>Email</h3>
+                <p><a href="mailto:rafacoimbrarsantos@gmail.com">rafacoimbrarsantos@gmail.com</a></p>
+            </div>
+            <div class="card-contato">
+                <div class="icone-contato">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="32" height="32" fill="url(#pattern0_16_5)"/>
+                        <defs>
+                        <pattern id="pattern0_16_5" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_16_5" transform="scale(0.03125)"/>
+                        </pattern>
+                        <image id="image0_16_5" width="32" height="32" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAudJREFUWIXF101oXFUYxvHfezMRiRWqFUWibqxCsYu2glUIxZ2IO5ssSt3oQrLyo6BE8tEhmTSKIqI7BV1UF7aIooJE/ECqosFuahdtxYVJW6mLStOiIJM5LjKZzkwyX9Ewz2bOOfO/53nmnnPueydAPm2Wc1AYlNxmY7WAo3ImjcSlKJt/i3s22LheJ+UMZHIOdsEctiuayDDUBfMVDWW4tYsB+jNkXQyQ5dZx0ZLkB+E4LpTHbpHcKzygwx/USYAreE3RG/Lxx5pEPt2sx1PCM7iunUlDIaU2uJ/wqLFYaCvqi+kORR9iVyu0ndv1pT572jaHkZjXZwBft0JbLcEvegw5EH+bTtslDwofGI3f16QLqR97JbMOxGn5NChnDneuL0B42gvxZ7m3F3nJSwrpXcvHt7/MnZVcwH70yTyPl+XjokJ6Fh+vJ8D3RuOzqv4/5c8+PFlDprq1LilW2mPxiUKaw31rmTTbA0frTLY2YWsVdWw40ghtHCB8VWnPpK14vO0ADMunq1V1qWquDgKcq7SLdiA6CJDpsaPSK2l4ghoH2ORKVZilDsxXdHUf3Ohy5wEu2lJpJyc6NE+Wqq5ZdFPnAXrtrLTH41fMdhDgI/k4XxVnZyOw2Sl4uKZX9JjkmzbMP1f0RM1IeKQR3KwWXJZzu6LNeFN4zmicMJl267FHMo3eMvsXRpUcMxHHa2aZSTdYMo9Na5k0uwPXKzpkLH7DuORTU+kuE/Gj5TLcW8X2CadXmUPJTCPzVgFg2FQaNBZzmBVOmU4LkndWkcm2VWOFtE+qe2rWqVUxyoTDCincbdgZXyjZJtyPh1axteb78bYWz492yvG1eN8ZryuaNR554btVVFjeS4fSFoX0Fg7jmlaTt/tCsqJF4T3skuyu+SY5JpzCPk3W/L8G+N+VodRF/1ImnG/NbZCSs5nUuFZvuMKRTM4kTnbB/mdFU5mRuCRnAK9a/uu8kZsySebxiqIB+Vj8F+rG1DqOCqBxAAAAAElFTkSuQmCC"/>
+                        </defs>
+                        </svg>
+                </div>
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/Rafael-Coimbra07" target="_blank">@Rafael-Coimbra07</a></p>
+            </div>
+            <div class="card-contato">
+                <div class="icone-contato">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="32" height="32" fill="url(#pattern0_16_3)"/>
+                        <defs>
+                        <pattern id="pattern0_16_3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_16_3" transform="scale(0.03125)"/>
+                        </pattern>
+                        <image id="image0_16_3" width="32" height="32" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAnNJREFUWIW11j+IHGUYx/HPs7e5FFqISpAQLAJiKTEJUQOSQkmCEEwj2CgYrKy0EHWz52Rze5dC7VIYBAMHYpEDUSFBCCpaBBT8AypBMAQEDZwRLILkbuexOBPudJ3ZPWd/1fDO932f7wzvPO+EtckMfY/jAWHJsgVF/GqCiZtXRd6lbREPrbn/h/S0brw3WYEit2n7FNuHMMvSId04NxmBIu/U9jnureCuWnGfIn5uWqClbb6mONyu7a2mi68K8PCI7H7H85FJCNw9Bn+keYFwdWQ67GxeoHR5DP568wJ8MgZ/tnmB8OGI7C9aTjQvsOICfqrh/sQhr8RvzQsUUUpv1HDfOhpfNl18VQAG3sZSBbfLfA5r0w0JFHFNmq3kBk7KjArmfwjAwEl8XcEeMOfFpgXWP1Evd2u5sE5sfVJ4RidONyWwvtBMfIHXKviQTunnY5MRgBUd6bOKOZukRbN5uAmB4ZuqyK3avsKWirnLwlM68e7Qu5lh1kHsE7YIPyqd0Y2L9QLQyz1azuOWComUegZ6iihvjs7ndqV3pD3/4EssmPK8l+P3agHo537pfUxXcpyXntONi39v5LO4o4K/LB3UjR/qv+vZfBILmKohS3yPe7C5dl2uCDtGayz9fEJaUP8mxs3p0Tvb8TwgnFG9J8bN0n81nH+nG+eU9uJSgwKbRheAmfhGy2581Ej58PHGDpfMMOdZ6XXcusHy15XuH+8N3EhE6sQpU3bggw2tkV4yE981c7z281GlY8KDI8541dHoUdeIxs1c7lU6gsO4bQhxTXpBN968MdD4DwYoctq0nQZ2CdusHnqXhEWduLIW/Qt/bKn8kh1sNwAAAABJRU5ErkJggg=="/>
+                        </defs>
+                        </svg>
+                </div>
+                <h3>Contato</h3>
+                <p><a href="tel:31992510348">31 99251-0348</a></p>
+            </div>
+        </div>
+        <div class="rodape-inferior">
+            © 2025 Rafael Coimbra. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <div class="modal" id="modalProjeto">
+        <div class="conteudo-modal">
+            <button class="fechar-modal" onclick="fecharModal()">×</button>
+            <h2 id="tituloModal"></h2>
+            <p id="descricaoModal"></p>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
